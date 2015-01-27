@@ -43,5 +43,7 @@ var getInternalVersion = function (success, fail) {
   return toReturn;
 };
 
-module.exports = getAppVersion;
-module.exports = getInternalVersion;
+module.exports = {
+  getAppVersion: getAppVersion,
+  getInternalVersion: getInternalVersion
+};
