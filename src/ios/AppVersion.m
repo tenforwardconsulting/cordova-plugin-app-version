@@ -25,10 +25,10 @@
     [self writeJavascript:javaScript];
 }
 
-- (void)getInternalVersion:(CDVInvokedURLCommand*)command
+- (void)getInternalVersion:(CDVInvokedUrlCommand*)command
 {
     NSString* callbackId = command.callbackId;
-    version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    NSString* version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
 
     CDVPluginResult* pluginResult = nil;
     NSString* javaScript = nil;
